@@ -18,6 +18,7 @@ with open('en-ru.txt') as f:
                 dct[i].append(fdata[0])
 
 
+sd = dict(sorted(dct.items()))
 with open('ru-en.txt', 'w') as f:
-    for key, value in dct.items():
+    for key, value in sd.items():
         f.write(key + ' - ' + ', '.join(value) + '\n')
